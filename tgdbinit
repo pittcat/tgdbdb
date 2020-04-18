@@ -1,3 +1,4 @@
+source ~/.gdbdashboard
 python
 import libtmux
 import subprocess as sp
@@ -23,7 +24,7 @@ tty = app_pane.get('pane_tty')
 gdb.execute('tty %s' % (tty,))
 end
 
-dashboard -layout source assembly registers stack
+dashboard -layout source variables stack
 alias db=dashboard
 db -style syntax_highlighting 'monokai'
 
